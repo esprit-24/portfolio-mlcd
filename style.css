@@ -64,6 +64,14 @@ p {
   color: var(--color-primary);
 }
 
+.nav-avatar {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(14, 165, 233, 0.55);
+}
+
 .navbar-toggler {
   border-color: var(--color-border);
   box-shadow: none;
