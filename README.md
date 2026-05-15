@@ -37,7 +37,7 @@ Il a été conçu pour accompagner mes candidatures à des stages, alternances, 
 
 ## Déploiement
 
-Le portfolio sera déployé en ligne avec GitHub Pages.
+Le portfolio sera déployé en ligne avec Netlify.
 
 Lien du site :
 
