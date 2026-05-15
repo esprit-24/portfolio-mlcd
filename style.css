@@ -115,7 +115,8 @@ p {
   border-radius: 6px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.is-active {
   color: var(--color-text);
   background: rgba(14, 165, 233, 0.12);
 }

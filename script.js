@@ -2,6 +2,8 @@ const menuToggle = document.querySelector("#menuToggle");
 const navLinks = document.querySelector("#navLinks");
 const currentYear = document.querySelector("#currentYear");
 const backToTop = document.querySelector("#backToTop");
+const sections = document.querySelectorAll("section[id]");
+const menuLinks = document.querySelectorAll(".nav-links a");
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
@@ -37,3 +39,26 @@ if (backToTop) {
     });
   });
 }
+
+function updateActiveMenuLink() {
+  let currentSectionId = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 120;
+
+    if (window.scrollY >= sectionTop) {
+      currentSectionId = section.getAttribute("id");
+    }
+  });
+
+  menuLinks.forEach((link) => {
+    link.classList.remove("is-active");
+
+    if (link.getAttribute("href") === `#${currentSectionId}`) {
+      link.classList.add("is-active");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateActiveMenuLink);
+updateActiveMenuLink();
