@@ -2,9 +2,16 @@ const currentYear = document.querySelector("#currentYear");
 const backToTop = document.querySelector("#backToTop");
 const navLinks = document.querySelectorAll(".nav-link");
 const navbarCollapse = document.querySelector("#navbarContent");
+const profilePhoto = document.querySelector("#profilePhoto");
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
+}
+
+if (profilePhoto) {
+  profilePhoto.addEventListener("error", () => {
+    profilePhoto.parentElement.classList.add("has-error");
+  });
 }
 
 if (backToTop) {
