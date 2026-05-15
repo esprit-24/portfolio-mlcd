@@ -5,318 +5,433 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio | Mouhamed Lamine Cissé Diop</title>
         <meta name="description" content="Portfolio de Mouhamed Lamine Cissé Diop, étudiant en informatique spécialisé en ingénierie logicielle, gestion de données et machine learning.">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
-        <header class="site-header" id="siteHeader">
-            <nav class="navbar" aria-label="Navigation principale">
-                <a href="#accueil" class="logo">MLCD<span>.</span></a>
+    <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+        <nav id="mainNav" class="navbar navbar-expand-lg fixed-top site-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#accueil">MLCD<span>.</span></a>
 
-                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#a-propos">À propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#parcours">Parcours</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section id="accueil" class="hero">
-                <div class="hero-content">
-                    <p class="eyebrow">Bonjour, je suis</p>
-                    <h1>Mouhamed Lamine Cissé Diop</h1>
-                    <p class="hero-title">Ingénieur Logiciel & Data Engineer</p>
-                    <p class="hero-text">
-                    Étudiant en informatique spécialisé en gestion de données et ingénierie logicielle,
-                    je conçois des applications web, des systèmes orientés données et des solutions intégrant
-                    l’intelligence artificielle.
-                    </p>
-
-                    <div class="hero-actions">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
-                    </div>
-                </div>
-
-                <div class="hero-card" aria-label="Résumé du profil">
-                    <p class="card-label">Profil</p>
-                    <h2>Développement web, data engineering et machine learning</h2>
-                    <ul>
-                    <li>Master 2 Gestion de Données et Ingénierie Logicielle</li>
-                    <li>Expérience professionnelle au CCOS</li>
-                    <li>Projets web, mobile, data et IA</li>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                    <ul class="navbar-nav gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
+            </div>
+        </nav>
+
+        <main>
+            <section id="accueil" class="hero-section">
+                <div class="container">
+                    <div class="row align-items-center min-vh-100 g-5 py-5">
+                        <div class="col-lg-7">
+                            <p class="eyebrow">Bonjour, je suis</p>
+                            <h1 class="hero-title-main">Mouhamed Lamine Cissé Diop</h1>
+                            <p class="hero-role">Ingénieur Logiciel & Data Engineer</p>
+                            <p class="hero-description">
+                                Étudiant en informatique spécialisé en gestion de données et ingénierie logicielle,
+                                je conçois des applications web, des systèmes orientés données et des solutions intégrant
+                                l’intelligence artificielle.
+                            </p>
+
+                            <div class="d-flex flex-wrap gap-3 mt-4">
+                                <a href="#projets" class="btn btn-primary-custom">
+                                    Voir mes projets <i class="bi bi-arrow-down ms-1"></i>
+                                </a>
+
+                                <a href="#contact" class="btn btn-outline-custom">
+                                    Me contacter
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="profile-card">
+                                <div class="profile-icon">
+                                    <i class="bi bi-code-slash"></i>
+                                </div>
+
+                                <p class="card-label">Profil</p>
+                                <h2>Développement web, data engineering et machine learning</h2>
+
+                                <ul class="profile-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Master 2 Gestion de Données et Ingénierie Logicielle</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Expérience professionnelle au Centre de Calcul Ousmane Seck (CCOS)</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Projets académiques web, mobile, data et IA</li>
+                                </ul>
+
+                                <div class="profile-tags">
+                                    <span>Java</span>
+                                    <span>Python</span>
+                                    <span>Angular</span>
+                                    <span>Laravel</span>
+                                    <span>Flutter</span>
+                                    <span>ML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="a-propos" class="section">
-                <div class="section-header">
-                    <p class="section-tag">Présentation</p>
-                    <h2>À propos</h2>
-                </div>
-
-                <div class="about-grid">
-                    <div>
-                        <p>
-                            Je suis étudiant en informatique à l’Université Gaston Berger de Saint-Louis,
-                            avec un parcours orienté vers la conception d’applications, les bases de données,
-                            le data engineering et le machine learning.
-                        </p>
-                        <p>
-                            Mon objectif est de contribuer à des projets utiles, bien structurés et maintenables,
-                            tout en renforçant mes compétences en développement logiciel et en systèmes de données.
-                        </p>
+            <section id="a-propos" class="section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Présentation</p>
+                        <h2>À propos</h2>
                     </div>
 
-                    <div class="info-card">
-                        <h3>Objectif professionnel</h3>
-                        <p>
-                            Je recherche des opportunités de stage, d’alternance ou de poursuite d’études en master,
-                            dans des environnements où je peux participer à des projets concrets et progresser avec une équipe.
-                        </p>
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-lg-7">
+                            <div class="content-card h-100">
+                                <p>
+                                    Je suis étudiant en informatique à l’Université Gaston Berger de Saint-Louis,
+                                    avec un parcours orienté vers la conception d’applications, les bases de données,
+                                    le data engineering et le machine learning.
+                                </p>
+                                <p>
+                                    Mon objectif est de contribuer à des projets utiles, bien structurés et maintenables,
+                                    tout en renforçant mes compétences en développement logiciel et/ou en systèmes de données.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="content-card accent-card h-100">
+                                <h3><i class="bi bi-bullseye me-2"></i>Objectif professionnel</h3>
+                                <p>
+                                    Je recherche des opportunités de stage, d’alternance, de travail (CDD - CDI) ou de poursuite d’études,
+                                    dans des environnements où je peux participer à des projets concrets et progresser avec une équipe.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="competences" class="section section-alt">
-                <div class="section-header">
-                    <p class="section-tag">Technologies</p>
-                    <h2>Compétences</h2>
-                </div>
-
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3>Langages</h3>
-                        <p>Java, Python, JavaScript, PHP, Dart, SQL</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Développement logiciel</h3>
-                        <p>Angular, React, Spring Boot, Django, Laravel, Flutter, Bootstrap</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Data & Machine Learning</h3>
-                        <p>Machine Learning, Scikit-learn, TensorFlow, Keras, Data Mining</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Bases de données & BI</h3>
-                        <p>PostgreSQL, MySQL, ETL avec Pentaho, Data Warehouse, OLAP, MDX</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Outils</h3>
-                        <p>Git, GitHub, Docker, Flask</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <h3>Architecture</h3>
-                        <p>API REST, MVC, UML, architecture client-serveur</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="projets" class="section">
-                <div class="section-header">
-                    <p class="section-tag">Réalisations</p>
-                    <h2>Projets sélectionnés</h2>
-                </div>
-
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-tags">
-                            <span>Expérience professionnelle</span>
-                            <span>Interface utilisateur</span>
-                        </div>
-
-                        <h3>Plateforme Opportunités - Université Gaston Berger</h3>
-
-                        <p>
-                            Contribution avec le Centre de Calcul Ousmane Seck à la refonte de la plateforme Opportunités
-                            de l’Université Gaston Berger de Saint-Louis. Travail réalisé sur l’amélioration de l’interface,
-                            l’expérience utilisateur, certaines pages frontend, l’intégration avec le backend, la correction
-                            de bugs et l’optimisation de fonctionnalités.
-                        </p>
-
-                        <div class="project-links">
-                            <a href="https://opportunites.ugb.sn/" target="_blank" rel="noopener noreferrer">Voir la plateforme</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-tags">
-                            <span>Laravel</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                        </div>
-
-                        <h3>VoxCampus - Plateforme de vote électronique</h3>
-
-                        <p>
-                            Plateforme de vote en ligne avec authentification, vote unique par utilisateur,
-                            interfaces dynamiques et gestion des résultats en temps réel.
-                        </p>
-
-                        <div class="project-links">
-                            <a href="https://github.com/esprit-24/VoxCampus" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-tags">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>API REST</span>
-                        </div>
-
-                        <h3>TravelApp - Application mobile touristique</h3>
-
-                        <p>
-                            Application mobile de découverte et de gestion de sites touristiques avec interfaces Flutter,
-                            intégration d’API REST et backend dédié à la gestion des contenus.
-                        </p>
-
-                        <div class="project-links">
-                            <a href="https://github.com/esprit-24/travel-app" target="_blank" rel="noopener noreferrer">Application</a>
-                            <a href="https://github.com/esprit-24/travel_api" target="_blank" rel="noopener noreferrer">API</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>Machine Learning</span>
-                        </div>
-
-                        <h3>Système intelligent de sélection de modèles</h3>
-
-                        <p>
-                            Projet de meta-learning pour sélectionner dynamiquement le meilleur algorithme de classification
-                            à partir de données IoT, avec extraction de méta-features et comparaison de plusieurs modèles.
-                        </p>
-
-                        <div class="project-links">
-                            <a href="https://github.com/esprit-24/Projet_MetaLearning" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="parcours" class="section section-alt">
-                <div class="section-header">
-                    <p class="section-tag">Formation & expérience</p>
-                    <h2>Parcours</h2>
-                </div>
-
-                <div class="timeline">
-                    <article class="timeline-item">
-                        <p class="timeline-date">2025</p>
-                        <h3>Développeur Web - Centre de Calcul Ousmane Seck</h3>
-                        <p>
-                            Contribution à la plateforme Opportunités et à la plateforme de suivi des diplômés
-                            au sein de l’Université Gaston Berger de Saint-Louis.
-                        </p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <p class="timeline-date">2024 - en cours</p>
-                        <h3>Master 2 - Gestion de Données et Ingénierie Logicielle</h3>
-                        <p>
-                            Université Gaston Berger de Saint-Louis. Sujet de mémoire : échantillonnage de requêtes
-                            fréquentes dans les bases de données multidimensionnelles.
-                        </p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <p class="timeline-date">2023 - 2024</p>
-                        <h3>Master 1 - Gestion de Données et Ingénierie Logicielle</h3>
-                        <p>Université Gaston Berger de Saint-Louis.</p>
-                    </article>
-
-                    <article class="timeline-item">
-                        <p class="timeline-date">2022 - 2023</p>
-                        <h3>Licence - Systèmes d’Information</h3>
-                        <p>Université Gaston Berger de Saint-Louis.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="cv" class="section">
-                <div class="section-header">
-                    <p class="section-tag">Curriculum Vitae</p>
-                    <h2>Résumé du profil</h2>
-                </div>
-
-                <div class="cv-card">
-                    <div>
-                        <h3>Mouhamed Lamine Cissé Diop</h3>
-                        <p>Étudiant en informatique - Ingénierie logicielle & Data Engineering</p>
-
-                        <ul>
-                            <li>Master 2 en Gestion de Données et Ingénierie Logicielle</li>
-                            <li>Expérience en développement web au Centre de Calcul Ousmane Seck</li>
-                            <li>Projets en applications web, mobile, systèmes distribués et machine learning</li>
-                            <li>Compétences en Java, Python, JavaScript, PHP, SQL, Angular, Laravel et Flutter</li>
-                            <li>Intérêt pour les systèmes performants, la donnée et l’intelligence artificielle</li>
-                        </ul>
+            <section id="competences" class="section-padding section-muted">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Technologies</p>
+                        <h2>Compétences</h2>
                     </div>
 
-                    <a href="assets/CV_Mouhamed_Lamine_Cisse_DIOP.pdf" class="btn btn-primary" download>
-                        Télécharger le CV
-                    </a>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-braces"></i></div>
+                                <h3>Langages</h3>
+                                <p>Java, Python, JavaScript, PHP, Dart, SQL</p>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-window-stack"></i></div>
+                                <h3>Développement logiciel</h3>
+                                <p>Angular, React, Spring Boot, Django, Laravel, Flutter, Bootstrap</p>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-cpu"></i></div>
+                                <h3>Data & Machine Learning</h3>
+                                <p>Machine Learning, Scikit-learn, TensorFlow, Keras, Data Mining</p>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-database"></i></div>
+                                <h3>Bases de données & BI</h3>
+                                <p>PostgreSQL, MySQL, ETL avec Pentaho, Data Warehouse, OLAP, MDX</p>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-tools"></i></div>
+                                <h3>Outils</h3>
+                                <p>Git, GitHub, Docker, Flask, JHipster</p>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <article class="skill-card h-100">
+                                <div class="card-icon"><i class="bi bi-diagram-3"></i></div>
+                                <h3>Architecture</h3>
+                                <p>API REST, MVC, UML, architecture client-serveur</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="contact" class="section section-alt">
-                <div class="section-header">
-                    <p class="section-tag">Contact</p>
-                    <h2>Me contacter</h2>
+            <section id="projets" class="section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Réalisations</p>
+                        <h2>Projets sélectionnés</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <article class="project-card h-100">
+                                <div class="project-tags">
+                                    <span>Expérience professionnelle</span>
+                                    <span>Interface utilisateur</span>
+                                </div>
+
+                                <h3>Plateforme Opportunités - Université Gaston Berger</h3>
+                                <p>
+                                    Contribution avec le Centre de Calcul Ousmane Seck à la refonte de la plateforme Opportunités
+                                    de l’Université Gaston Berger de Saint-Louis. Travail réalisé sur l’amélioration de l’interface,
+                                    l’expérience utilisateur, la correction
+                                    de bugs et l’optimisation de fonctionnalités.
+                                </p>
+
+                                <a href="https://opportunites.ugb.sn/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    Voir la plateforme <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                </a>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="project-card h-100">
+                                <div class="project-tags">
+                                    <span>Angular</span>
+                                    <span>API REST</span>
+                                    <span>Plateforme web</span>
+                                    <span>PostgreSQL</span>
+                                    <span>SpringBoot</span>
+                                </div>
+
+                                <h3>Opportunités Sénégal - Plateforme d’opportunités</h3>
+                                <p>
+                                    Plateforme web destinée à centraliser des opportunités pour les étudiants,
+                                    jeunes diplômés et professionnels au Sénégal. Le projet comprend une interface
+                                    utilisateur et une API backend, avec une architecture client-serveur.
+                                </p>
+
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="https://github.com/esprit-24/opportunites-client" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        Frontend <i class="bi bi-github ms-1"></i>
+                                    </a>
+
+                                    <a href="https://github.com/esprit-24/opportunites-api" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        API <i class="bi bi-github ms-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="project-card h-100">
+                                <div class="project-tags">
+                                    <span>Laravel</span>
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                </div>
+
+                                <h3>VoxCampus - Plateforme de vote électronique</h3>
+                                <p>
+                                    Plateforme de vote en ligne avec authentification, vote unique par utilisateur,
+                                    interfaces dynamiques et gestion des résultats en temps réel.
+                                </p>
+
+                                <a href="https://github.com/esprit-24/VoxCampus" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    GitHub <i class="bi bi-github ms-1"></i>
+                                </a>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="project-card h-100">
+                                <div class="project-tags">
+                                    <span>Flutter</span>
+                                    <span>Dart</span>
+                                    <span>API REST</span>
+                                </div>
+
+                                <h3>TravelApp - Application mobile touristique</h3>
+                                <p>
+                                    Application mobile de découverte et de gestion de sites touristiques avec interfaces Flutter,
+                                    intégration d’API REST et backend dédié à la gestion des contenus.
+                                </p>
+
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="https://github.com/esprit-24/travel-app" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        Application <i class="bi bi-github ms-1"></i>
+                                    </a>
+
+                                    <a href="https://github.com/esprit-24/travel_api" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        API <i class="bi bi-github ms-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="project-card h-100">
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>Scikit-learn</span>
+                                    <span>Machine Learning</span>
+                                </div>
+
+                                <h3>Système intelligent de sélection de modèles</h3>
+                                <p>
+                                    Projet de meta-learning pour sélectionner dynamiquement le meilleur algorithme de classification
+                                    à partir de données IoT, avec extraction de méta-features et comparaison de plusieurs modèles.
+                                </p>
+
+                                <a href="https://github.com/esprit-24/Projet_MetaLearning" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    GitHub <i class="bi bi-github ms-1"></i>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="contact-grid">
-                    <a href="mailto:ldiop0809@gmail.com" class="contact-card">
-                        <span>Email</span>
-                        <strong>ldiop0809@gmail.com</strong>
-                    </a>
+            <section id="parcours" class="section-padding section-muted">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Formation & expérience</p>
+                        <h2>Parcours</h2>
+                    </div>
 
-                    <a href="https://github.com/esprit-24" target="_blank" rel="noopener noreferrer" class="contact-card">
-                        <span>GitHub</span>
-                        <strong>github.com/esprit-24</strong>
-                    </a>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <p class="timeline-date">2025</p>
+                            <h3>Développeur Web - Centre de Calcul Ousmane Seck</h3>
+                            <p>
+                                Contribution à la plateforme Opportunités et à la plateforme de suivi des diplômés
+                                au sein de l’Université Gaston Berger de Saint-Louis.
+                            </p>
+                        </article>
 
-                    <a href="https://www.linkedin.com/in/mouhamed-lamine-ciss%C3%A9-diop-694775361" target="_blank" rel="noopener noreferrer" class="contact-card">
-                        <span>LinkedIn</span>
-                        <strong>linkedin.com/in/mouhamed-lamine-cissé-diop</strong>
-                    </a>
+                        <article class="timeline-item">
+                            <p class="timeline-date">2024 - en cours</p>
+                            <h3>Master 2 - Gestion de Données et Ingénierie Logicielle</h3>
+                            <p>
+                                Université Gaston Berger de Saint-Louis. Sujet de mémoire : échantillonnage de requêtes
+                                fréquentes dans les bases de données multidimensionnelles.
+                            </p>
+                        </article>
 
-                    <div class="contact-card">
-                        <span>Localisation</span>
-                        <strong>Italie / Sénégal</strong>
+                        <article class="timeline-item">
+                            <p class="timeline-date">2023 - 2024</p>
+                            <h3>Master 1 - Gestion de Données et Ingénierie Logicielle</h3>
+                            <p>Université Gaston Berger de Saint-Louis.</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <p class="timeline-date">2022 - 2023</p>
+                            <h3>Licence - Systèmes d’Information</h3>
+                            <p>Université Gaston Berger de Saint-Louis.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cv" class="section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Curriculum Vitae</p>
+                        <h2>Résumé du profil</h2>
+                    </div>
+
+                    <div class="cv-card">
+                        <div>
+                            <h3>Mouhamed Lamine Cissé Diop</h3>
+                            <p class="cv-role">Étudiant en informatique - Ingénierie logicielle & Data Engineering</p>
+
+                            <ul class="cv-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Master 2 en Gestion de Données et Ingénierie Logicielle</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Expérience en développement web au Centre de Calcul Ousmane Seck</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Projets en applications web, mobile, systèmes distribués et machine learning</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Compétences en Java, Python, JavaScript, PHP, SQL, Angular, Laravel et Flutter</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Intérêt pour les systèmes performants, la donnée et l’intelligence artificielle</li>
+                            </ul>
+                        </div>
+
+                        <a href="assets/CV_Mouhamed_Lamine_Cisse_DIOP.pdf" class="btn btn-primary-custom" download>
+                            <i class="bi bi-download me-2"></i>Télécharger le CV
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section-padding section-muted">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p class="section-tag">Contact</p>
+                        <h2>Me contacter</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <a href="mailto:ldiop0809@gmail.com" class="contact-card h-100">
+                                <i class="bi bi-envelope-fill"></i>
+                                <span>Email</span>
+                                <strong>ldiop0809@gmail.com</strong>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <a href="https://github.com/esprit-24" target="_blank" rel="noopener noreferrer" class="contact-card h-100">
+                                <i class="bi bi-github"></i>
+                                <span>GitHub</span>
+                                <strong>github.com/esprit-24</strong>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <a href="https://www.linkedin.com/in/mouhamed-lamine-ciss%C3%A9-diop-694775361" target="_blank" rel="noopener noreferrer" class="contact-card h-100">
+                                <i class="bi bi-linkedin"></i>
+                                <span>LinkedIn</span>
+                                <strong>Profil LinkedIn</strong>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="contact-card h-100">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Localisation</span>
+                                <strong>Italie, VILLONGO VIA PIZZIGONI 24060 BERGAMO / Sénégal</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
         <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">
-            ↑
+            <i class="bi bi-chevron-up"></i>
         </button>
 
         <footer class="site-footer">
-            <p>&copy; <span id="currentYear"></span> Mouhamed Lamine Cissé Diop. Tous droits réservés.</p>
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Mouhamed Lamine Cissé Diop. Tous droits réservés.</p>
+            </div>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

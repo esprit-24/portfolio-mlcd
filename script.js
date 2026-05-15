@@ -1,26 +1,10 @@
-const menuToggle = document.querySelector("#menuToggle");
-const navLinks = document.querySelector("#navLinks");
 const currentYear = document.querySelector("#currentYear");
 const backToTop = document.querySelector("#backToTop");
-const sections = document.querySelectorAll("section[id]");
-const menuLinks = document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll(".nav-link");
+const navbarCollapse = document.querySelector("#navbarContent");
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
-}
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navLinks.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") {
-      navLinks.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    }
-  });
 }
 
 if (backToTop) {
@@ -40,25 +24,23 @@ if (backToTop) {
   });
 }
 
-function updateActiveMenuLink() {
-  let currentSectionId = "";
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 120;
-
-    if (window.scrollY >= sectionTop) {
-      currentSectionId = section.getAttribute("id");
+      if (collapse) {
+        collapse.hide();
+      }
     }
   });
+});
 
-  menuLinks.forEach((link) => {
-    link.classList.remove("is-active");
-
-    if (link.getAttribute("href") === `#${currentSectionId}`) {
-      link.classList.add("is-active");
-    }
+if (window.bootstrap) {
+  const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: "#mainNav",
+    offset: 90
   });
+
+  scrollSpy.refresh();
 }
-
-window.addEventListener("scroll", updateActiveMenuLink);
-updateActiveMenuLink();
